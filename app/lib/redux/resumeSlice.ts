@@ -8,7 +8,7 @@ import {
   ResumeSkills,
   ResumeWorkExperience,
 } from "./types";
-import { ShowForm } from "./settingSlice";
+import { ShowForm } from "./settingsSlice";
 import { RootState } from "./store";
 
 export const initialProfile: ResumeProfile = {

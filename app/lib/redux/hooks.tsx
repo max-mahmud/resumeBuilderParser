@@ -5,7 +5,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { deepMerge } from "../deep-merge";
 import { Resume } from "./types";
 import { initialResumeState, setResume } from "./resumeSlice";
-import { Settings, initialSettings, setSettings } from "./settingSlice";
+import { Settings, initialSettings, setSettings } from "./settingsSlice";
 
 export const useAppDispatch: () => AppDispatch = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;

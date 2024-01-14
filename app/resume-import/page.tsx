@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getHasUsedAppBefore } from "../lib/redux/local-storage";
 import Link from "next/link";
+import ResumeDropzone from "../components/ResumeDropzone";
 
 const ImportResume = () => {
   const [hasUsedAppBefore, setHasUsedAppBefore] = useState(false);
@@ -22,7 +23,7 @@ const ImportResume = () => {
         {!hasUsedAppBefore ? (
           <>
             <h1 className="text-lg font-semibold text-gray-900">Import data from an existing resume</h1>
-            {/* <ResumeDropzone onFileUrlChange={onFileUrlChange} className="mt-5" />  */}
+            <ResumeDropzone onFileUrlChange={onFileUrlChange} className="mt-5" />
             {!hasAddedResume && (
               <>
                 <OrDivider />
@@ -45,7 +46,7 @@ const ImportResume = () => {
               </>
             )}
             <h1 className="font-semibold text-gray-900">Override data with a new resume</h1>
-            {/* <ResumeDropzone onFileUrlChange={onFileUrlChange} className="mt-5" /> */}
+            <ResumeDropzone onFileUrlChange={onFileUrlChange} className="mt-5" />
           </>
         )}
       </div>

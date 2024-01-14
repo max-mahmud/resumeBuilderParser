@@ -1,3 +1,4 @@
+import { extractResumeFromSections } from "./extract-resume-from-sections";
 import { groupLinesIntoSections } from "./group-lines-into-sections";
 import { groupTextItemsIntoLines } from "./group-text-items-into-lines";
 import { readPdf } from "./read-pdf";

@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import resumeSlice from "./resumeSlice";
-import settingsSlice from "./settingSlice";
+import settingsSlice from "./settingsSlice";
 
 export const store = configureStore({
   reducer: { resume: resumeSlice, settings: settingsSlice },

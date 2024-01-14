@@ -1,4 +1,4 @@
-import { TextItems } from "./types";
+import { TextItem, TextItems } from "./types";
 import * as pdfjs from "pdfjs-dist";
 
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
@@ -13,6 +13,7 @@ export const readPdf = async (fileUrl: string): Promise<TextItems> => {
   for (let i = 1; i <= pdffile.numPages; i++) {
     const page = await pdffile.getPage(i);
     const textContent = await page.getTextContent();
+
     await page.getOperatorList();
     const commonObjs = page.commonObjs;
 
@@ -42,6 +43,7 @@ export const readPdf = async (fileUrl: string): Promise<TextItems> => {
   }
 
   const isEmptySpace = (textItem: TextItem) => !textItem.hasEOL && textItem.text.trim() === "";
+
   textItems = textItems.filter((textItem) => !isEmptySpace(textItem));
 
   return textItems;
