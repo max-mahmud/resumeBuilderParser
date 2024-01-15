@@ -5,7 +5,7 @@ import { getHasUsedAppBefore } from "../lib/redux/local-storage";
 import Link from "next/link";
 import ResumeDropzone from "../components/ResumeDropzone";
 
-const ImportResume = () => {
+export default function ImportResume() {
   const [hasUsedAppBefore, setHasUsedAppBefore] = useState(false);
   const [hasAddedResume, setHasAddedResume] = useState(false);
 
@@ -22,8 +22,13 @@ const ImportResume = () => {
       <div className="mx-auto mt-14 max-w-3xl rounded-md border border-gray-200 px-10 py-10 text-center shadow-md">
         {!hasUsedAppBefore ? (
           <>
-            <h1 className="text-lg font-semibold text-gray-900">Import data from an existing resume</h1>
-            <ResumeDropzone onFileUrlChange={onFileUrlChange} className="mt-5" />
+            <h1 className="text-lg font-semibold text-gray-900">
+              Import data from an existing resume
+            </h1>
+            <ResumeDropzone
+              onFileUrlChange={onFileUrlChange}
+              className="mt-5"
+            />
             {!hasAddedResume && (
               <>
                 <OrDivider />
@@ -45,16 +50,19 @@ const ImportResume = () => {
                 <OrDivider />
               </>
             )}
-            <h1 className="font-semibold text-gray-900">Override data with a new resume</h1>
-            <ResumeDropzone onFileUrlChange={onFileUrlChange} className="mt-5" />
+            <h1 className="font-semibold text-gray-900">
+              Override data with a new resume
+            </h1>
+            <ResumeDropzone
+              onFileUrlChange={onFileUrlChange}
+              className="mt-5"
+            />
           </>
         )}
       </div>
     </main>
   );
-};
-
-export default ImportResume;
+}
 
 const OrDivider = () => (
   <div className="mx-[-2.5rem] flex items-center pb-6 pt-8" aria-hidden="true">

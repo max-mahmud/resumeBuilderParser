@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FlexboxSpacer } from "../components/FlexboxSpacer";
+import { AutoTypingResume } from "./AutoTypingResume";
 
 const Hero = () => {
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
       </div>
       <FlexboxSpacer maxWidth={100} minWidth={50} className="hidden lg:block" />{" "}
       <div className="mt-6 flex justify-center lg:mt-4 lg:block lg:grow">
-        AutoTypingResume{/* <AutoTypingResume /> */}
+        <AutoTypingResume />
       </div>
     </section>
   );

@@ -5,11 +5,14 @@ import { selectResume } from "@/app/lib/redux/resumeSlice";
 import { selectSettings } from "@/app/lib/redux/settingsSlice";
 import { useMemo, useState } from "react";
 import { FlexboxSpacer } from "../FlexboxSpacer";
-import { ResumeIFrameCSR } from "./ResumeIFrame";
-import { ResumePDFProfile } from "./ResumePDF/ResumePDFProfile";
-import { ResumePDF } from "./ResumePDF";
+// import { ResumeIFrameCSR } from "./ResumeIFrame";
+// import { ResumePDFProfile } from "./ResumePDF/ResumePDFProfile";
+// import { ResumePDF } from "./ResumePDF";
 import { useRegisterReactPDFFont, useRegisterReactPDFHypenationCallback } from "../fonts/hooks";
-import { ResumeControlBarCSR } from "./ResumeControlBar";
+import { ResumePDF } from "../Resume/ResumePDF";
+import { ResumeIFrameCSR } from "../Resume/ResumeIFrame";
+import { ResumeControlBarCSR } from "../Resume/ResumeControlBar";
+// import { ResumeControlBarCSR } from "./ResumeControlBar";
 
 export const Resume = () => {
   const [scale, setScale] = useState(0.8);
